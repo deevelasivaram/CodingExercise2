@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="numberOrd">
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Numbers</title>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular.js" data-semver="1.4.9"></script>
+    <script src="app.js"></script>
+    <script src="Number.js"></script>
+  </head>
+  <body ng-controller="MainCtrl">
+    <p>orderBy Numbers : {{name}}</p>
+	<div><span ng-repeat="n in ordernum | orderBy track by $index">{{n}}</span></div>
+    <input type="text" ng-model="orgnum" number ng-change="order(orgnum)"/>
+  </body>
+</html>
