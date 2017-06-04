@@ -10,7 +10,7 @@
   </head>
   <body ng-controller="MainCtrl">
     <p>orderBy Numbers : {{name}}</p>
-	<div><span ng-repeat="n in ordernum | orderBy track by $index">{{n}}</span></div>
+	<div><span ng-repeat="n in ordernum | orderBy: '-num' track by $index">{{n.num}}</span></div>
     <input type="text" ng-model="orgnum" number ng-change="order(orgnum)"/>
   </body>
 </html>
